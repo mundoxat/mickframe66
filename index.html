@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mick xatframe ✨</title>
+    <link rel="icon" href="https://xat.com/content/web/R00228/img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    
+    <div id="loading-screen">
+        <div class="loader-content">
+            <h1 class="loader-title">Mick</h1>
+            <div class="chic-spinner"></div>
+        </div>
+    </div>
+
+    <button id="toggle-player-btn" class="floating-toggle" aria-label="Música">
+        <i class="ph-fill ph-music-note"></i>
+    </button>
+    
+    <div id="floating-music-player" class="music-player hidden-player">
+        <div class="player-blur"></div>
+        <div class="player-content">
+            <div class="vinyl-decoration">
+                <div class="vinyl-center"></div>
+            </div>
+            <div class="music-info">
+                <div class="scrolling-text-container">
+                    <span id="music-title" class="scrolling-text">Selecciona una canción...</span>
+                </div>
+            </div>
+            
+            <audio id="audio-player" src="" loop></audio>
+            
+            <div class="player-controls">
+                <button id="prev-song" class="control-btn"><i class="ph-fill ph-skip-back"></i></button>
+                <button id="play-pause-button" class="play-btn">
+                    <i id="play-icon" class="ph-fill ph-play"></i>
+                </button>
+                <button id="next-song" class="control-btn"><i class="ph-fill ph-skip-forward"></i></button>
+            </div>
+            <div class="volume-box">
+                <i class="ph-fill ph-speaker-low"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+    </div>
+
+    <div class="sparkles-container"></div>
+
+    <div class="container" style="opacity: 0;"> 
+        
+        <header class="glam-header">
+            <h1 class="glam-title">Mick</h1>
+            <p class="glam-subtitle">10004</p>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" data-target="home-section" class="active">Home</a></li>
+                <li><a href="#" data-target="profile-section">Profile</a></li>
+                <li><a href="#" data-target="gallery-section">Galery</a></li>
+            </ul>
+        </nav>
+
+        <div id="content-area">
+
+            <div id="home-section" class="content-section active-section">
+                
+                <section class="bio-card">
+                    <div class="avatar-border">
+                        <img src="https://xatimg.com/image/IQjxotodRWTG.png" alt="Mick Avatar" class="main-avatar">
+                    </div>
+                    <h2>About of me</h2>
+                    <p class="bio-text">Hello.</p>
+                </section>
+
+                <div class="divider-gold"><span>✦</span></div>
+
+                <section class="friends-showcase">
+                    <h2 class="section-title">My Friends </h2>
+                    <div class="friends-grid-chic">
+                        <a href="https://xat.me/Mick" target="_blank" class="friend-gem">
+                            <img src="https://xatimg.com/image/IQjxotodRWTG.png" alt="Mick">
+                            <span>Mick</span>
+                        </a>
+                        <a href="https://xat.me/Mick" target="_blank" class="friend-gem">
+                            <img src="https://xatimg.com/image/IQjxotodRWTG.png" alt="Mick1">
+                            <span>Mick1</span>
+                        </a>
+                        <a href="https://xat.me/Mick" target="_blank" class="friend-gem">
+                            <img src="https://xatimg.com/image/IQjxotodRWTG.png" alt="Mick2">
+                            <span>Mick2</span>
+                        </a>
+                        <a href="https://xat.me/Mick" target="_blank" class="friend-gem">
+                            <img src="https://xatimg.com/image/IQjxotodRWTG.png" alt="Mick3">
+                            <span>Mick3</span>
+                        </a>
+                        
+                    </div>
+                </section>
+            </div>
+
+            <div id="profile-section" class="content-section hidden">
+                <section class="chic-panel">
+                    <h2 class="section-title">About of me</h2>
+                    <ul class="glam-list">
+                        <li>
+                            <div class="list-icon"></div>
+                            <div class="list-content">
+                                <strong>Músic Favorite</strong>
+                                <span>Pop & Rapp</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-icon"></div>
+                            <div class="list-content">
+                                <strong>Quote:</strong>
+                                <span>We have so many things and so many opportunities that we don't even know what we care about anymore.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-icon"></div>
+                            <div class="list-content">
+                                <strong>Current Status</strong>
+                                <span>Always busy.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div id="gallery-section" class="content-section hidden">
+                <section class="chic-panel gallery-panel">
+                    <h2 class="section-title">Galery</h2>
+                    
+                    <div class="glam-carousel">
+                        <div class="carousel-track">
+                            <img src="https://xatimg.com/image/MtFMG3EGjsuO.png" alt="Foto 1" class="active">
+                            <img src="https://xatimg.com/image/JoD0PhL3vBIO.png" alt="Foto 2">
+                            <img src="https://xatimg.com/image/ZhaUr1dI1tBd.jpg" alt="Foto 3">
+                            <img src="https://xatimg.com/image/WNomsplxG1xH.png" alt="Foto 4">
+                        </div>
+                        
+                        <button class="nav-arrow prev-arrow">❮</button>
+                        <button class="nav-arrow next-arrow">❯</button>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+        <footer class="footer">
+            <p>MICK <a href="https://xat.me/Rayko">10004</a> © 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
